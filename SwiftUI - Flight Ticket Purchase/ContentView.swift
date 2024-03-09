@@ -9,15 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        GeometryReader{ /// what does GeometryReader do? It allows you to read the size of the screen
+            let size = $0.size /// what does $0.size do? It gets the size of the screen
+            let safeArea = $0.safeAreaInsets /// what does $0.safeAreaInsets do? It gets the safe area of the screen
+            Home(size: size, safeArea: safeArea)
+                .ignoresSafeArea(.container, edges: .vertical) 
         }
-        .padding()
     }
 }
+
 
 #Preview {
     ContentView()

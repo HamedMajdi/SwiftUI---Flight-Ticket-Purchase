@@ -11,6 +11,8 @@
 		5730FDA22B9C4A5C005998EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730FDA12B9C4A5C005998EE /* ContentView.swift */; };
 		5730FDA42B9C4A5F005998EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5730FDA32B9C4A5F005998EE /* Assets.xcassets */; };
 		5730FDA72B9C4A5F005998EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5730FDA62B9C4A5F005998EE /* Preview Assets.xcassets */; };
+		5730FDAF2B9C54A6005998EE /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730FDAE2B9C54A6005998EE /* Home.swift */; };
+		5730FDB22B9C6DE1005998EE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730FDB12B9C6DE1005998EE /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		5730FDA12B9C4A5C005998EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5730FDA32B9C4A5F005998EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5730FDA62B9C4A5F005998EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5730FDAE2B9C54A6005998EE /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		5730FDB12B9C6DE1005998EE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		5730FD9E2B9C4A5C005998EE /* SwiftUI - Flight Ticket Purchase */ = {
 			isa = PBXGroup;
 			children = (
+				5730FDB02B9C6DC7005998EE /* Model */,
+				5730FDAD2B9C5499005998EE /* View */,
 				5730FD9F2B9C4A5C005998EE /* SwiftUI___Flight_Ticket_PurchaseApp.swift */,
 				5730FDA12B9C4A5C005998EE /* ContentView.swift */,
 				5730FDA32B9C4A5F005998EE /* Assets.xcassets */,
@@ -65,6 +71,22 @@
 				5730FDA62B9C4A5F005998EE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5730FDAD2B9C5499005998EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5730FDAE2B9C54A6005998EE /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5730FDB02B9C6DC7005998EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5730FDB12B9C6DE1005998EE /* Card.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5730FDA22B9C4A5C005998EE /* ContentView.swift in Sources */,
+				5730FDAF2B9C54A6005998EE /* Home.swift in Sources */,
 				5730FDA02B9C4A5C005998EE /* SwiftUI___Flight_Ticket_PurchaseApp.swift in Sources */,
+				5730FDB22B9C6DE1005998EE /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
