@@ -151,6 +151,8 @@ struct Home: View {
                 .shadow(color: .black.opacity(0.14), radius: 8, x: 6, y: 6)
                 .rotation3DEffect(.init(degrees: constrainedProgress * 40.0), axis: (x: 1, y: 0, z: 0), anchor: .bottom)
                 .padding(.top, progress * -160)
+                // Moving Current Card to the top
+                .offset(y: progress < 0 ? progress * 250 : 0)
         }
         .frame(height: 200)
         .zIndex(Double(sampleCards.count - index))
