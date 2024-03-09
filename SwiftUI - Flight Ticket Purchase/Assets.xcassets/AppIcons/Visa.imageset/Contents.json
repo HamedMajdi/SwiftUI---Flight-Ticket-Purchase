@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "81_810053_visa_logo_png_transparent_svg_vector_freebie_supply_removebg.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
