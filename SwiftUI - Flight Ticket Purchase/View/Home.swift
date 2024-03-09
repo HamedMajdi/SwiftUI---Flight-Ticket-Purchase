@@ -110,6 +110,37 @@ struct Home: View {
                 .padding(.horizontal, 30)
                 .offset(y: offsetY)
                 .offset(y: currentCardOffset * -200)
+                
+                //Gradinet View
+                Rectangle()
+                    .fill(.linearGradient(
+                        colors: [
+                            .clear,
+                            .clear,
+                            .clear,
+                            .clear,
+                            .white.opacity(0.3),
+                            .white.opacity(0.7),
+                            .white
+                        ], startPoint: .top, endPoint: .bottom))
+                    .allowsHitTesting(false) // what does this mean? It means that the rectangle is not clickable. Reason: Since the rectanle is an overlay view, it will prevent all interactions whth the view below, so activating this modifier will entirely disable the rectangl's interatction
+                
+                Button {
+                    
+                } label: {
+                    Text("Confirm $1,367.00")
+                        .font(.callout)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 30)
+                        .padding(.vertical, 10)
+                        .background{
+                            Capsule()
+                                .fill(Color("BlueTop").gradient)
+                        }
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+                .padding(.bottom, safeArea.bottom == 0 ? 15 : safeArea.bottom)
             }
             .coordinateSpace(name: "SCROLL")
         }
@@ -156,6 +187,9 @@ struct Home: View {
         }
         .frame(height: 200)
         .zIndex(Double(sampleCards.count - index))
+        .onTapGesture {
+            print(index)
+        }
     }
 }
 
