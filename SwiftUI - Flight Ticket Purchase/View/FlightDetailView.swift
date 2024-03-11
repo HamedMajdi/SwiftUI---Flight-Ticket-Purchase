@@ -34,5 +34,5 @@ struct FlightDetailView: View {
 }
 
 #Preview {
-    FlightDetailsView("", code: "", timing: "")
+    FlightDetailView(alignment: .leading, place: "Istanbul", code: "IST", timing: "03:00")
 }

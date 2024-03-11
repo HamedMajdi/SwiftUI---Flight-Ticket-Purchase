@@ -13,6 +13,9 @@
 		5730FDA72B9C4A5F005998EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5730FDA62B9C4A5F005998EE /* Preview Assets.xcassets */; };
 		5730FDAF2B9C54A6005998EE /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730FDAE2B9C54A6005998EE /* Home.swift */; };
 		5730FDB22B9C6DE1005998EE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730FDB12B9C6DE1005998EE /* Card.swift */; };
+		5730FDB42B9DAE0B005998EE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730FDB32B9DAE0B005998EE /* DetailView.swift */; };
+		5730FDB62B9DAE56005998EE /* FlightDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730FDB52B9DAE56005998EE /* FlightDetailView.swift */; };
+		5730FDB82B9DD5CD005998EE /* PayementStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730FDB72B9DD5CD005998EE /* PayementStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		5730FDA62B9C4A5F005998EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5730FDAE2B9C54A6005998EE /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		5730FDB12B9C6DE1005998EE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		5730FDB32B9DAE0B005998EE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		5730FDB52B9DAE56005998EE /* FlightDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailView.swift; sourceTree = "<group>"; };
+		5730FDB72B9DD5CD005998EE /* PayementStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayementStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				5730FDAE2B9C54A6005998EE /* Home.swift */,
+				5730FDB32B9DAE0B005998EE /* DetailView.swift */,
+				5730FDB52B9DAE56005998EE /* FlightDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -85,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				5730FDB12B9C6DE1005998EE /* Card.swift */,
+				5730FDB72B9DD5CD005998EE /* PayementStatus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,8 +169,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5730FDA22B9C4A5C005998EE /* ContentView.swift in Sources */,
+				5730FDB82B9DD5CD005998EE /* PayementStatus.swift in Sources */,
+				5730FDB62B9DAE56005998EE /* FlightDetailView.swift in Sources */,
 				5730FDAF2B9C54A6005998EE /* Home.swift in Sources */,
 				5730FDA02B9C4A5C005998EE /* SwiftUI___Flight_Ticket_PurchaseApp.swift in Sources */,
+				5730FDB42B9DAE0B005998EE /* DetailView.swift in Sources */,
 				5730FDB22B9C6DE1005998EE /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

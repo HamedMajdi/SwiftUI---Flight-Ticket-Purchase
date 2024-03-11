@@ -5,14 +5,19 @@
 //  Created by Hamed Majdi on 3/10/24.
 //
 
-import SwiftUI
-
-struct PayementStatus: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+enum PayementStatus: String, CaseIterable {
+    case started = "Connected..."
+    case initiated = "Secure Payement..."
+    case finished = "Purchased!"
+    
+    var symbolImage: String{
+        switch self {
+        case .started:
+            return "wifi"
+        case .initiated:
+            return "checkmark.shield"
+        case .finished:
+            return "checkmark"
+        }
     }
-}
-
-#Preview {
-    PayementStatus()
 }
