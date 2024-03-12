@@ -124,7 +124,7 @@ struct DetailView: View {
             
             // Home Screen Button
             Button{
-                
+                resetAnimationAndView()
             } label: {
                 Text("Go to Home Screen")
                     .fontWeight(.semibold)
@@ -180,6 +180,23 @@ struct DetailView: View {
                 .foregroundStyle(.gray)
         }
         .frame(maxWidth: .infinity)
+    }
+    
+    // Resetting Animation
+    func resetAnimationAndView(){
+        animator.currentPatmentStatus = .started
+        animator.showCloudView = false
+        withAnimation(.easeInOut(duration: 0.3)){
+            animator.showFinalView = false
+        }
+        
+        animator.ringAnimation = [false, false]
+        animator.showLoadingView = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
+            withAnimation(.easeInOut){
+                animator.startAnimation = false
+            }
+        }
     }
 }
 

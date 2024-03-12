@@ -73,8 +73,10 @@ struct Home: View {
         }
         .allowsHitTesting(!animator.showFinalView) ///whenever the final view shows up, disable the actions on the overlayed view
         .background{
-            DetailView(size: size, safeArea: safeArea)
-                .environmentObject(animator)
+            if animator.startAnimation{
+                DetailView(size: size, safeArea: safeArea)
+                    .environmentObject(animator)
+            }
         }
         .overlayPreferenceValue(RectKey.self, { value in
             if let anchor = value["PLANEBOUNDS"]{
@@ -283,6 +285,7 @@ struct Home: View {
             Color.white
                 .ignoresSafeArea()
         }
+        .clipped()
         
         // Applying 3D rotation
         .rotation3DEffect(.init(degrees: animator.startAnimation ? -90 : 0), axis: (x: 1, y: 0, z: 0), anchor: .init(x: 0.5, y: 0.25))
@@ -393,7 +396,7 @@ struct Home: View {
         
     }
     
-    
+     
 }
 
 #Preview {
