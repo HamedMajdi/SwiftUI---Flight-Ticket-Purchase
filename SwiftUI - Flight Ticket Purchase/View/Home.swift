@@ -71,6 +71,7 @@ struct Home: View {
                 }
             }
         }
+        .allowsHitTesting(!animator.showFinalView) ///whenever the final view shows up, disable the actions on the overlayed view
         .background{
             DetailView(size: size, safeArea: safeArea)
                 .environmentObject(animator)
@@ -94,6 +95,8 @@ struct Home: View {
                         .shadow(color: .black.opacity(0.25), radius: 1, x: status == .finished ? -400 : 0, y: status == .finished ? 170 : 0)
                         .offset(x: planeRect.minX, y: planeRect.minY)
                         ///moving the plane a bit down to look like it is centered when the 3D animation is happening
+                        .offset(y: animator.startAnimation ? 50 : 0)
+                        .scaleEffect(animator.showFinalView ? 0.9 : 1)
                         .offset(y: animator.startAnimation ? 50 : 0)
                         .onAppear{
                             animator.initialPlaneBounds = rect
@@ -389,6 +392,8 @@ struct Home: View {
         .padding(.bottom, size.height * 0.15)
         
     }
+    
+    
 }
 
 #Preview {
