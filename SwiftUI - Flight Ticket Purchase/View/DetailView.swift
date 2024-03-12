@@ -12,6 +12,7 @@ struct DetailView: View {
     
     var size: CGSize
     var safeArea: EdgeInsets
+    @EnvironmentObject var animator: Animator
     
     var body: some View {
         VStack{
